@@ -5,7 +5,7 @@ const { width, height } = $graph.getBoundingClientRect();
 
 const MAX = 10;
 const MIN = 0;
-const GRAPH_PERIOD = 5000;
+const GRAPH_PERIOD = 10000;
 
 ws.onerror = function (error) {
   console.warn(`[error] ${error.message}`);
