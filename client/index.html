@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+    }
+
+    #graph {
+      position: relative;
+      margin: 20px;
+      width: calc(100vw - 40px);
+      height: calc(100vh - 40px);
+    }
+
+    .point {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="graph">
+
+  </div>
+  <script type="module" src="/js/socket.js"></script>
+</body>
+
+</html>
