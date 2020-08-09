@@ -15,17 +15,22 @@
       margin: 0;
     }
 
-    #graph {
-      position: relative;
+    #dashboard {
+      display: grid;
       margin: 40px 20px;
       width: calc(100vw - 40px);
       height: calc(100vh - 80px);
+      grid-template: 1fr 1fr, 1fr 1fr;
+    }
+
+    .graph {
+      position: relative;
     }
 
     .point {
       position: absolute;
-      width: 16px;
-      height: 32px;
+      width: 8px;
+      height: 16px;
       position: absolute;
       border-radius: 4px;
       background-color: black;
@@ -34,10 +39,9 @@
 </head>
 
 <body>
-  <div id="graph">
-
+  <div id="dashboard"></div>
   </div>
-  <script type="module" src="/js/socket.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>
