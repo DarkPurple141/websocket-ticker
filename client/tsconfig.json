@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ES2016", "DOM.Iterable"],
+    "target": "ES6",
+    "outDir": "../public",
+    "strict": true
+  },
+  "include": ["./*"]
+}

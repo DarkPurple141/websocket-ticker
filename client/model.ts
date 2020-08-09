@@ -1,13 +1,9 @@
 class Model {
+  private ws: WebSocket;
+  private subscribers: Function[] = [];
   constructor() {
     this.ws = new WebSocket('ws://localhost:8999');
-    this.ws.onerror = function (error) {
-      console.warn(`[error] ${error.message}`);
-    };
-    this.ws.onclose = function () {
-      console.info('[close] Connection closed to WS');
-    };
-    this.subscribers = [];
+    this.ws.onclose = () => console.info('[close] Connection closed to WS');
 
     this.ws.onmessage = (event) => {
       if (event.data) {
@@ -19,7 +15,7 @@ class Model {
     };
   }
 
-  addSubscriber(cb) {
+  addSubscriber(cb: Function) {
     this.subscribers.push(cb);
   }
 }

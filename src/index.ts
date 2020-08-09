@@ -5,7 +5,7 @@ import * as WebSocket from 'ws';
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 //initialize a simple http server
 const server = http.createServer(app);

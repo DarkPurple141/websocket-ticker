@@ -4,10 +4,12 @@
   "description": "minimal proof of concept of websocket interaction",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -P ./client && tsc",
+    "dev": "tsc -P ./client -w & npm start",
     "start": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Alex H <alex.hinds141@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
